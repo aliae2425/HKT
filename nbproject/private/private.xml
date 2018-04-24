@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Flore_2000">
+            <file>file:/Users/noamcarmi/Sites/kim0.5/src/AdminBundle/Resources/views/Default/famille.html.twig</file>
+            <file>file:/Users/noamcarmi/Sites/kim0.5/src/AdminBundle/Entity/Tag.php</file>
+            <file>file:/Users/noamcarmi/Sites/kim0.5/src/AdminBundle/Entity/Tatoo.php</file>
+            <file>file:/Users/noamcarmi/Sites/kim0.5/src/AdminBundle/Controller/DefaultController.php</file>
+            <file>file:/Users/noamcarmi/Sites/kim0.5/src/AdminBundle/Entity/Photo.php</file>
+        </group>
+    </open-files>
+</project-private>

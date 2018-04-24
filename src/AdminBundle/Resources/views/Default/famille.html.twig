@@ -1,0 +1,78 @@
+{% extends "admin.html.twig" %}
+{% block path%}
+    <li class="breadcrumb-item active">Gestion famille</li>
+{% endblock%}
+{%block content %}
+    <div class="card mb-3">
+        <div class="card-header">
+        <i class="fa fa-pencil"></i> Ajouter familles </div>
+        <div class="card-body">
+            <form id="form" class="form-horizontal">
+                <legend>Les familles crée ici sont en page d'acceuil</legend>
+                <fieldset>
+                <!-- Text input-->
+                <div class="form-group">
+                  <div class="col-md-12">
+                  <input id="textinput" name="textinput" type="text" placeholder="Nom de la famille" class="form-control input-md">
+                  </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                  <div class="col-md-12">                     
+                    <textarea class="form-control" id="textarea" name="textarea">Description</textarea>
+                  </div>
+                </div>
+                <input id="formvalid" type="submit" value="enregistrer" class="btn btn-primary"></input>
+                </fieldset>
+            </form>
+            
+        </div>
+      </div>
+    <div class="card mb-3">
+        <div class="card-header">
+        <i class="fa fa-smile-o"></i> recap familles </div>
+        <div class="card-body" id="tableRecap">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nom</th>
+                      <th>nb tatoo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for famille in familles %}
+                        <tr>
+                          <td>{{famille.id}}</td>
+                          <td>{{famille.nom}}</td>
+                          <td>{{famille.nbTatoo}}</td>
+                        </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{asset('admin/js/sb-admin-datatables.min.js')}}"></script>
+    <script>
+        $('#form').submit(function(){
+            $.post(
+                "{{path('familleAdd')}}",
+                {
+                  name: "test",
+                  Desc: "text"
+                }
+              ).done(
+                fonction(data){
+                  console.log(data);
+                }
+              );
+            return false;
+        });
+    </script>
+{% endblock %}
