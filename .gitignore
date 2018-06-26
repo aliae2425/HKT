@@ -1,3 +1,7 @@
+
+# Created by https://www.gitignore.io/api/symfony
+
+### Symfony ###
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -25,6 +29,7 @@
 /bin/*
 !bin/console
 !bin/symfony_requirements
+/vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -37,7 +42,18 @@
 # Build data
 /build/
 
+# Composer PHAR
+/composer.phar
+
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
 
-/vendor
+# Embedded web-server pid file
+/.web-server-pid
+
+### Symfony Patch ###
+/web/css/
+/web/js/
+
+
+# End of https://www.gitignore.io/api/symfony
